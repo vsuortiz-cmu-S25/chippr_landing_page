@@ -76,6 +76,104 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Two-Column: Video + Signup Form */}
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-5xl mx-auto mb-16">
+              
+              {/* Left: Before/After Video */}
+              <div id="video">
+                <div className="mb-4 text-center lg:text-left">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                    See the difference
+              </h2>
+                  <p className="text-gray-600">
+                    Watch how Chippr transforms financial stress into confidence
+              </p>
+            </div>
+
+                {/* Video Container */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 aspect-video mb-6">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/M-sQczN0NWA"
+                    title="Chippr Before/After Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+
+                {/* Before → After Summary */}
+                <div className="grid grid-cols-3 gap-3 text-center text-sm">
+                  <div>
+                    <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-lg">😰</span>
+              </div>
+                    <p className="font-semibold text-gray-900">Before</p>
+                    <p className="text-xs text-gray-600">Multiple apps, missing payments</p>
+            </div>
+                  <div>
+                    <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-lg">📱</span>
+          </div>
+                    <p className="font-semibold text-gray-900">With Chippr</p>
+                    <p className="text-xs text-gray-600">Everything in one place</p>
+            </div>
+                  <div>
+                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-lg">🎉</span>
+                </div>
+                    <p className="font-semibold text-gray-900">After</p>
+                    <p className="text-xs text-gray-600">In control & saving</p>
+              </div>
+                </div>
+              </div>
+
+              {/* Right: Signup Form */}
+              <div id="signup" className="lg:sticky lg:top-8">
+                <div className="bg-white rounded-2xl shadow-2xl p-6 border-2 border-brand-500">
+                  <div className="text-center mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Join the waitlist
+                    </h3>
+                    <p className="text-gray-600 mb-3">
+                      Be the first to know when we launch
+                    </p>
+                    <div className="inline-flex items-center gap-2 text-sm text-brand-700 bg-brand-50 px-3 py-1.5 rounded-lg">
+                      <span>🎁</span>
+                      <span className="font-medium">Early access + exclusive perks</span>
+                    </div>
+                  </div>
+
+                  {/* Airtable Embed */}
+                  <iframe 
+                    className="airtable-embed w-full rounded-xl" 
+                    src="https://airtable.com/embed/app34lFLAzuWWX1C8/pagruSnCnHa2vnKyb/form" 
+                    width="100%" 
+                    height="533"
+                    style={{ background: 'transparent', border: 'none' }}
+                  />
+
+                  {/* Trust Indicators */}
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <div className="flex items-center justify-center gap-6 text-xs text-gray-600">
+                      <div className="flex items-center gap-1">
+                        <svg className="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+                        </svg>
+                        <span>Bank-level security</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <svg className="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                        <span>500+ students joined</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
             {/* Who is Chippr For? */}
             <div className="mb-16 max-w-5xl mx-auto">
               <div className="text-center mb-8">
@@ -343,104 +441,6 @@ export default function Home() {
                   <span className="px-3 py-1 bg-white/20 rounded-full">Actually fun to use</span>
                 </div>
               </div>
-            </div>
-
-            {/* Two-Column: Video + Signup Form */}
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-5xl mx-auto">
-              
-              {/* Left: Before/After Video */}
-              <div id="video">
-                <div className="mb-4 text-center lg:text-left">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    See the difference
-              </h2>
-                  <p className="text-gray-600">
-                    Watch how Chippr transforms financial stress into confidence
-              </p>
-            </div>
-
-                {/* Video Container */}
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 aspect-video mb-6">
-                  <iframe
-                    className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/M-sQczN0NWA"
-                    title="Chippr Before/After Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-
-                {/* Before → After Summary */}
-                <div className="grid grid-cols-3 gap-3 text-center text-sm">
-                  <div>
-                    <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-lg">😰</span>
-              </div>
-                    <p className="font-semibold text-gray-900">Before</p>
-                    <p className="text-xs text-gray-600">Multiple apps, missing payments</p>
-            </div>
-                  <div>
-                    <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-lg">📱</span>
-          </div>
-                    <p className="font-semibold text-gray-900">With Chippr</p>
-                    <p className="text-xs text-gray-600">Everything in one place</p>
-            </div>
-                  <div>
-                    <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-lg">🎉</span>
-                </div>
-                    <p className="font-semibold text-gray-900">After</p>
-                    <p className="text-xs text-gray-600">In control & saving</p>
-              </div>
-                </div>
-              </div>
-
-              {/* Right: Signup Form */}
-              <div id="signup" className="lg:sticky lg:top-8">
-                <div className="bg-white rounded-2xl shadow-2xl p-6 border-2 border-brand-500">
-                  <div className="text-center mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      Join the waitlist
-                    </h3>
-                    <p className="text-gray-600 mb-3">
-                      Be the first to know when we launch
-                    </p>
-                    <div className="inline-flex items-center gap-2 text-sm text-brand-700 bg-brand-50 px-3 py-1.5 rounded-lg">
-                      <span>🎁</span>
-                      <span className="font-medium">Early access + exclusive perks</span>
-                    </div>
-                  </div>
-
-                  {/* Airtable Embed */}
-                  <iframe 
-                    className="airtable-embed w-full rounded-xl" 
-                    src="https://airtable.com/embed/app34lFLAzuWWX1C8/pagruSnCnHa2vnKyb/form" 
-                    width="100%" 
-                    height="533"
-                    style={{ background: 'transparent', border: 'none' }}
-                  />
-
-                  {/* Trust Indicators */}
-                  <div className="mt-4 pt-4 border-t border-gray-200">
-                    <div className="flex items-center justify-center gap-6 text-xs text-gray-600">
-                      <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-                        </svg>
-                        <span>Bank-level security</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                        </svg>
-                        <span>500+ students joined</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         </section>
