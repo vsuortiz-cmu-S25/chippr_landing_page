@@ -68,7 +68,7 @@ export default function Home() {
                     See the difference
               </h2>
                   <p className="text-gray-600">
-                    Watch Alex and Emily go from stressed to in control
+                    Watch Alex go from stressed to in control
               </p>
             </div>
 
