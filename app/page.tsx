@@ -43,6 +43,24 @@ export default function Home() {
                 The AI-powered budgeting app that combines expense tracking, bill splitting, and financial learning into one social experience.
               </p>
 
+              {/* Financial Pain Points Stats */}
+              <div className="max-w-4xl mx-auto mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-gray-200">
+                    <div className="text-3xl font-bold text-brand-600 mb-1">73%</div>
+                    <div className="text-sm text-gray-600">of young adults feel stressed about money</div>
+                  </div>
+                  <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-gray-200">
+                    <div className="text-3xl font-bold text-brand-600 mb-1">$150+</div>
+                    <div className="text-sm text-gray-600">lost per month due to poor expense tracking</div>
+                  </div>
+                  <div className="bg-white/80 backdrop-blur rounded-xl p-4 border border-gray-200">
+                    <div className="text-3xl font-bold text-brand-600 mb-1">4+ apps</div>
+                    <div className="text-sm text-gray-600">juggled to manage finances & split bills</div>
+                  </div>
+                </div>
+              </div>
+
               {/* Quick Benefits */}
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 {["Split expenses automatically", "AI-powered insights", "Gamified savings", "No awkward money talks"].map(
@@ -55,6 +73,95 @@ export default function Home() {
                       </span>
                     )
                   )}
+              </div>
+            </div>
+
+            {/* Who is Chippr For? */}
+            <div className="mb-16 max-w-5xl mx-auto">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                  Made for your financial reality
+                </h2>
+                <p className="text-gray-600">
+                  Designed specifically for the unique challenges of young adults
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                {/* Persona 1: College Student */}
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border border-blue-200">
+                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
+                    🎓
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 text-center mb-2">College Students</h3>
+                  <p className="text-sm text-gray-700 text-center mb-4">
+                    &ldquo;I share an apartment with 3 roommates and we&rsquo;re constantly splitting rent, utilities, and groceries.&rdquo;
+                  </p>
+                  <div className="space-y-2 text-xs text-gray-600">
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Track shared expenses with roommates</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Learn budgeting on a tight student budget</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>No awkward &ldquo;you owe me&rdquo; texts</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Persona 2: Young Professional */}
+                <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 border border-purple-200">
+                  <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
+                    💼
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 text-center mb-2">Young Professionals</h3>
+                  <p className="text-sm text-gray-700 text-center mb-4">
+                    &ldquo;I just started my first job and need to manage my paycheck, savings goals, and weekend expenses with friends.&rdquo;
+                  </p>
+                  <div className="space-y-2 text-xs text-gray-600">
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Connect all bank accounts in one place</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Build savings habits with AI guidance</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Split dinner bills & group trips easily</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Persona 3: Friend Groups */}
+                <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-6 border border-orange-200">
+                  <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
+                    👥
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 text-center mb-2">Friend Groups</h3>
+                  <p className="text-sm text-gray-700 text-center mb-4">
+                    &ldquo;Our friend group loves going out, but tracking who paid for what and settling up is always messy.&rdquo;
+                  </p>
+                  <div className="space-y-2 text-xs text-gray-600">
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Automatic expense splitting for groups</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Save together for group trips & events</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Instant settlements through the app</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -76,9 +183,12 @@ export default function Home() {
                     <span className="text-2xl">💸</span>
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-1.5">Split Expenses</h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 mb-2">
                     Automatically split bills with friends and track who owes what
                   </p>
+                  <div className="text-xs bg-blue-50 rounded-lg p-2 text-gray-700">
+                    <span className="font-semibold">Example:</span> Rent ($1,200) split 3 ways = $400 each
+                  </div>
                 </div>
 
                 {/* Feature 2: All Accounts in One Place */}
@@ -86,10 +196,13 @@ export default function Home() {
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
                     <span className="text-2xl">🏦</span>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-1.5">All Accounts</h3>
-                  <p className="text-sm text-gray-600">
-                    View all your bank accounts and balances in one dashboard
+                  <h3 className="font-semibold text-gray-900 mb-1.5">All Accounts in One Place</h3>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Connect your checking, savings, and credit cards
                   </p>
+                  <div className="text-xs bg-purple-50 rounded-lg p-2 text-gray-700">
+                    <span className="font-semibold">Total balance:</span> $3,247 across 4 accounts
+                  </div>
                 </div>
 
                 {/* Feature 3: AI Insights */}
@@ -97,10 +210,13 @@ export default function Home() {
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
                     <span className="text-2xl">🤖</span>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-1.5">AI Insights</h3>
-                  <p className="text-sm text-gray-600">
-                    Get smart spending advice and learn healthy financial habits
+                  <h3 className="font-semibold text-gray-900 mb-1.5">AI Financial Insights</h3>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Get smart spending advice and personalized tips
                   </p>
+                  <div className="text-xs bg-green-50 rounded-lg p-2 text-gray-700">
+                    <span className="font-semibold">Insight:</span> &ldquo;You could save $120/mo on dining out&rdquo;
+                  </div>
                 </div>
 
                 {/* Feature 4: Gamification */}
@@ -109,9 +225,12 @@ export default function Home() {
                     <span className="text-2xl">🎮</span>
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-1.5">Earn Rewards</h3>
-                  <p className="text-sm text-gray-600">
-                    Build streaks, unlock badges, and stay motivated to save
+                  <p className="text-sm text-gray-600 mb-2">
+                    Build streaks, unlock badges, and reach goals
                   </p>
+                  <div className="text-xs bg-yellow-50 rounded-lg p-2 text-gray-700">
+                    <span className="font-semibold">Achievement:</span> 🔥 7-day tracking streak!
+                  </div>
                 </div>
 
                 {/* Feature 5: Smart Reminders */}
@@ -120,9 +239,12 @@ export default function Home() {
                     <span className="text-2xl">⏰</span>
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-1.5">Smart Reminders</h3>
-                  <p className="text-sm text-gray-600">
-                    No awkward texts—automatic reminders and easy settlements
+                  <p className="text-sm text-gray-600 mb-2">
+                    Automatic payment reminders and settlements
                   </p>
+                  <div className="text-xs bg-pink-50 rounded-lg p-2 text-gray-700">
+                    <span className="font-semibold">Reminder:</span> &ldquo;Emma owes you $45 for pizza&rdquo;
+                  </div>
                 </div>
 
                 {/* Feature 6: Social Features */}
@@ -131,9 +253,77 @@ export default function Home() {
                     <span className="text-2xl">👥</span>
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-1.5">Save Together</h3>
-                  <p className="text-sm text-gray-600">
-                    Track shared goals and stay motivated with friends
+                  <p className="text-sm text-gray-600 mb-2">
+                    Set shared goals and track progress with friends
                   </p>
+                  <div className="text-xs bg-orange-50 rounded-lg p-2 text-gray-700">
+                    <span className="font-semibold">Goal:</span> Spring Break Trip - $800/$2,000
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Real-Life Scenarios */}
+            <div className="mb-16 max-w-4xl mx-auto">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                  Real financial challenges, real solutions
+                </h2>
+                <p className="text-gray-600">
+                  See how Chippr handles your everyday money situations
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {/* Scenario 1 */}
+                <div className="bg-gradient-to-r from-red-50 to-white rounded-xl p-5 border border-red-200">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                      😰
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-gray-900 mb-1">The Problem: &ldquo;I have no idea where my money goes&rdquo;</h4>
+                      <p className="text-sm text-gray-600 mb-2">You check your account and wonder where $200 went this week. Coffee? Ubers? That group dinner?</p>
+                      <div className="bg-white rounded-lg p-3 border border-red-300">
+                        <p className="text-xs font-semibold text-green-700 mb-1">✓ Chippr Solution:</p>
+                        <p className="text-xs text-gray-700">Automatic categorization shows you spent $87 on dining, $45 on transport, $68 on entertainment. AI suggests: &ldquo;Try meal prepping to save $40/week.&rdquo;</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Scenario 2 */}
+                <div className="bg-gradient-to-r from-orange-50 to-white rounded-xl p-5 border border-orange-200">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                      😬
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-gray-900 mb-1">The Problem: &ldquo;Awkward &lsquo;You owe me&rsquo; texts with roommates&rdquo;</h4>
+                      <p className="text-sm text-gray-600 mb-2">Three roommates, shared rent ($1,500), utilities ($180), internet ($60), groceries... who paid what?</p>
+                      <div className="bg-white rounded-lg p-3 border border-orange-300">
+                        <p className="text-xs font-semibold text-green-700 mb-1">✓ Chippr Solution:</p>
+                        <p className="text-xs text-gray-700">Add expenses once, split automatically. Each roommate owes $580. App sends polite reminders and tracks settlements. No awkward conversations.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Scenario 3 */}
+                <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl p-5 border border-blue-200">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                      🤔
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-gray-900 mb-1">The Problem: &ldquo;I want to save but don&rsquo;t know how to start&rdquo;</h4>
+                      <p className="text-sm text-gray-600 mb-2">After rent, food, and fun, you&rsquo;re left with $200. Should you save? How much? For what?</p>
+                      <div className="bg-white rounded-lg p-3 border border-blue-300">
+                        <p className="text-xs font-semibold text-green-700 mb-1">✓ Chippr Solution:</p>
+                        <p className="text-xs text-gray-700">Set a goal: &ldquo;Emergency Fund - $1,000.&rdquo; Chippr suggests saving $50/week. Track progress, earn badges, celebrate wins with friends. You hit your goal in 5 months!</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
