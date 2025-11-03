@@ -55,8 +55,105 @@ export default function Home() {
                       </span>
                     )
                   )}
+              </div>
+            </div>
+
+            {/* What We Offer - Feature Highlights */}
+            <div className="mb-16 max-w-4xl mx-auto">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                  Everything you need in one app
+                </h2>
+                <p className="text-gray-600">
+                  Manage personal and shared finances effortlessly
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {/* Feature 1: Split Expenses */}
+                <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                    <span className="text-2xl">💸</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-1.5">Split Expenses</h3>
+                  <p className="text-sm text-gray-600">
+                    Automatically split bills with friends and track who owes what
+                  </p>
+                </div>
+
+                {/* Feature 2: All Accounts in One Place */}
+                <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
+                    <span className="text-2xl">🏦</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-1.5">All Accounts</h3>
+                  <p className="text-sm text-gray-600">
+                    View all your bank accounts and balances in one dashboard
+                  </p>
+                </div>
+
+                {/* Feature 3: AI Insights */}
+                <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
+                    <span className="text-2xl">🤖</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-1.5">AI Insights</h3>
+                  <p className="text-sm text-gray-600">
+                    Get smart spending advice and learn healthy financial habits
+                  </p>
+                </div>
+
+                {/* Feature 4: Gamification */}
+                <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-3">
+                    <span className="text-2xl">🎮</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-1.5">Earn Rewards</h3>
+                  <p className="text-sm text-gray-600">
+                    Build streaks, unlock badges, and stay motivated to save
+                  </p>
+                </div>
+
+                {/* Feature 5: Smart Reminders */}
+                <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-3">
+                    <span className="text-2xl">⏰</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-1.5">Smart Reminders</h3>
+                  <p className="text-sm text-gray-600">
+                    No awkward texts—automatic reminders and easy settlements
+                  </p>
+                </div>
+
+                {/* Feature 6: Social Features */}
+                <div className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                    <span className="text-2xl">👥</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-1.5">Save Together</h3>
+                  <p className="text-sm text-gray-600">
+                    Track shared goals and stay motivated with friends
+                  </p>
                 </div>
               </div>
+            </div>
+
+            {/* Why Chippr is Different */}
+            <div className="mb-16 max-w-3xl mx-auto text-center">
+              <div className="bg-gradient-to-br from-brand-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl">
+                <h2 className="text-2xl font-bold mb-3">
+                  Why Chippr is different
+                </h2>
+                <p className="text-lg opacity-95 mb-4">
+                  Unlike traditional budgeting or splitting apps, we combine <span className="font-semibold">expense tracking</span>, <span className="font-semibold">bill splitting</span>, and <span className="font-semibold">financial learning</span> into one social, gamified experience designed for your lifestyle.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 text-sm">
+                  <span className="px-3 py-1 bg-white/20 rounded-full">No more juggling apps</span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full">Built for Gen Z</span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full">Actually fun to use</span>
+                </div>
+              </div>
+            </div>
 
             {/* Two-Column: Video + Signup Form */}
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-5xl mx-auto">
@@ -68,7 +165,7 @@ export default function Home() {
                     See the difference
               </h2>
                   <p className="text-gray-600">
-                    Watch Alex go from stressed to in control
+                    Watch how Chippr transforms financial stress into confidence
               </p>
             </div>
 
@@ -90,21 +187,21 @@ export default function Home() {
                       <span className="text-lg">😰</span>
               </div>
                     <p className="font-semibold text-gray-900">Before</p>
-                    <p className="text-xs text-gray-600">Stressed & disconnected</p>
+                    <p className="text-xs text-gray-600">Multiple apps, missing payments</p>
             </div>
                   <div>
                     <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-2">
                       <span className="text-lg">📱</span>
           </div>
                     <p className="font-semibold text-gray-900">With Chippr</p>
-                    <p className="text-xs text-gray-600">Unified & automated</p>
+                    <p className="text-xs text-gray-600">Everything in one place</p>
             </div>
                   <div>
                     <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
                       <span className="text-lg">🎉</span>
                 </div>
                     <p className="font-semibold text-gray-900">After</p>
-                    <p className="text-xs text-gray-600">Confident & on track</p>
+                    <p className="text-xs text-gray-600">In control & saving</p>
               </div>
                 </div>
               </div>
@@ -116,9 +213,13 @@ export default function Home() {
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       Join the waitlist
                     </h3>
-                    <p className="text-gray-600">
-                      Get early access and exclusive launch perks
+                    <p className="text-gray-600 mb-3">
+                      Be the first to know when we launch
                     </p>
+                    <div className="inline-flex items-center gap-2 text-sm text-brand-700 bg-brand-50 px-3 py-1.5 rounded-lg">
+                      <span>🎁</span>
+                      <span className="font-medium">Early access + exclusive perks</span>
+                    </div>
                   </div>
 
                   {/* Airtable Embed */}
