@@ -74,30 +74,13 @@ export default function Home() {
 
                 {/* Video Container */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 aspect-video mb-6">
-                  {/* Replace this with your actual video embed */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-600 to-purple-600">
-                    <div className="text-center text-white p-8">
-                      <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-white/30 transition-colors cursor-pointer">
-                        <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                      <p className="text-lg font-semibold mb-2">Before/After: 2 minutes</p>
-                      <p className="text-sm text-white/80">
-                        From chaos to clarity with Chippr
-                      </p>
-                </div>
-              </div>
-
-                  {/* Uncomment and use this for actual video embed:
                   <iframe
                     className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                    src="https://www.youtube.com/embed/M-sQczN0NWA"
                     title="Chippr Before/After Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
-                  */}
                 </div>
 
                 {/* Before → After Summary */}
