@@ -1,40 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
-  const [formData, setFormData] = useState({ name: "", email: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    // Simulate form submission - replace with your actual API endpoint
-    try {
-      // Example: await fetch('/api/waitlist', { method: 'POST', body: JSON.stringify(formData) })
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
-      // Track analytics event (if you have analytics set up)
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'generate_lead', {
-          event_category: 'engagement',
-          event_label: 'waitlist_signup'
-        });
-      }
-      
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "" });
-    } catch (error) {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <>
@@ -161,107 +128,42 @@ export default function Home() {
 
               {/* Right: Signup Form */}
               <div id="signup" className="lg:sticky lg:top-8">
-                <div className="bg-white rounded-2xl shadow-2xl p-8 border-2 border-brand-500">
-                  {submitStatus === "success" ? (
-                    <div className="text-center py-8">
-                      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <div className="bg-white rounded-2xl shadow-2xl p-6 border-2 border-brand-500">
+                  <div className="text-center mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Join the waitlist
+                    </h3>
+                    <p className="text-gray-600">
+                      Get early access and exclusive launch perks
+                    </p>
+                  </div>
+
+                  {/* Airtable Embed */}
+                  <iframe 
+                    className="airtable-embed w-full rounded-xl" 
+                    src="https://airtable.com/embed/app34lFLAzuWWX1C8/pagruSnCnHa2vnKyb/form" 
+                    width="100%" 
+                    height="533"
+                    style={{ background: 'transparent', border: 'none' }}
+                  />
+
+                  {/* Trust Indicators */}
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <div className="flex items-center justify-center gap-6 text-xs text-gray-600">
+                      <div className="flex items-center gap-1">
+                        <svg className="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
                         </svg>
-                </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        You&rsquo;re on the list!
-                </h3>
-                      <p className="text-gray-600 mb-6">
-                        We&rsquo;ll notify you when Chippr launches. Check your email for confirmation.
-                      </p>
-                      <button
-                        onClick={() => setSubmitStatus("idle")}
-                        className="text-brand-600 font-medium hover:text-brand-700 transition-colors"
-                      >
-                        Sign up another email →
-                      </button>
-              </div>
-                  ) : (
-                    <>
-                      <div className="text-center mb-6">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                          Join the waitlist
-                </h3>
-                <p className="text-gray-600">
-                          Get early access and exclusive launch perks
-                </p>
-              </div>
-
-                      <form onSubmit={handleSubmit} className="space-y-4">
-                        <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                            Full Name
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            required
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-base"
-                            placeholder="Alex Johnson"
-                          />
-              </div>
-
-                        <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                            Email Address
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            required
-                            value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-base"
-                            placeholder="alex@university.edu"
-                    />
+                        <span>Bank-level security</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <svg className="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                        <span>500+ students joined</span>
+                      </div>
+                    </div>
                   </div>
-
-                        {submitStatus === "error" && (
-                          <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-                            Something went wrong. Please try again.
-              </div>
-                        )}
-
-                        <button
-                          type="submit"
-                          disabled={isSubmitting}
-                          className="w-full px-8 py-4 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-lg shadow-lg"
-                        >
-                          {isSubmitting ? "Joining..." : "Get Early Access"}
-                        </button>
-
-                        <p className="text-xs text-gray-600 text-center">
-                          No credit card required · Unsubscribe anytime
-                        </p>
-                      </form>
-
-                      {/* Trust Indicators */}
-                      <div className="mt-6 pt-6 border-t border-gray-200">
-                        <div className="flex items-center justify-center gap-6 text-xs text-gray-600">
-                          <div className="flex items-center gap-1">
-                            <svg className="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-                  </svg>
-                            <span>Bank-level security</span>
-                </div>
-                          <div className="flex items-center gap-1">
-                            <svg className="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                            </svg>
-                            <span>500+ students joined</span>
-                  </div>
-                </div>
-              </div>
-                    </>
-                  )}
                 </div>
               </div>
 
